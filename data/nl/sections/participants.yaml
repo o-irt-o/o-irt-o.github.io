@@ -42,3 +42,6 @@ achievements:
 - organisation: Universiteit van Amsterdam
   image: /images/sections/participants/uva.png
   link: https://extranet.uva.nl/content/a-z/cert-uva/cert-uva.html
+- organisation: University of Twente
+  image: /images/sections/participants/ut.svg
+  link: https://www.utwente.nl/nl/cyber-safety/meld-incidenten/
