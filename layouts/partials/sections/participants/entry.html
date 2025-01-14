@@ -1,0 +1,31 @@
+{{ $participantImage := resources.Get .image }}
+{{ $participantImageLg := ""}}
+{{ $participantImageSm := ""}}
+
+{{/* resize the images. don't resize svg image because its not supported */}}
+{{ if $participantImage }}
+  {{ if hasSuffix .image ".svg" }}
+    {{ $participantImageSm = $participantImage.RelPermalink }}
+    {{ $participantImageLg = $participantImage.RelPermalink }}
+  {{ else }}
+    {{ $participantImageSm = $participantImage.Resize "x300" }}
+    {{ $participantImageSm =  $participantImageSm.RelPermalink }}
+    {{ $participantImageLg = $participantImage.Resize "x1500" }}
+    {{ $participantImageLg =  $participantImageLg.RelPermalink }}
+  {{ end }}
+{{ end }}
+{{/*  don't use "background-image: url('{{ $participantImageSm }}');" Otherwise the images won't show in https://themes.gohugo.io/ */}}
+<div 
+  class="col-lg participant-entry flex"
+  style="background-image: url('{{ $participantImageSm }}');"
+>
+  <div class="text-center align-self-end participant-org">
+    {{ if .link }}
+      <a href={{ .link }}>
+    {{ end }}
+        <h4 class="title" id="achievement-title">{{ .organisation }}</h4>
+    {{ if .link }}
+      </a>
+    {{ end }}
+  </div>
+</div>

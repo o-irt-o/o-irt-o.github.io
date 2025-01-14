@@ -1,0 +1,44 @@
+# section information
+section:
+  name: Deelnemers
+  id: participants
+  enable: true
+  weight: 11
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideorganisation: true
+  template: sections/participants.html
+  text: Het Operationeel Incident Response Team Overleg heeft deelnemers uit de onderstaande organisaties.
+
+# Your achievements achievements
+achievements:
+- organisation: Belasting Dienst
+  image: /images/sections/participants/bld.svg
+  link: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/standaard_functies/prive/contact/fraude_misdaad_en_misstanden_melden/datalek-beveiligingslek-misbruik-computersystemen/security-operations-center-dutch-tax-and-customs-administration
+- organisation: Dutch Institute for Vulnerability Disclosure
+  image: /images/sections/participants/divd.svg
+  link: https://www.divd.nl
+- organisation: Erasmus MC
+  image: /images/sections/participants/emc.svg
+  link: https://www.erasmusmc.nl/
+- organisation: NCSC
+  image: /images/sections/participants/ncsc.svg
+  link: https://www.ncsc.nl/
+- organisation: KPN
+  image: /images/sections/participants/kpn.svg
+  link: https://www.kpn.nl/
+- organisation: Rijkswaterstaat
+  image: /images/sections/participants/rws.svg
+  link: https://www.rijkswaterstaat.nl/
+- organisation: Politie dienst IV
+  image: /images/sections/participants/politie.svg
+  link: https://www.politie.nl/
+- organisation: Schuberg Philis
+  image: /images/sections/participants/schubergphilis.png
+  link: https://www.schubergphilis.com
+- organisation: Surf Cert
+  image: /images/sections/participants/surfcert.jpg
+  link: https://www.surf.nl/diensten/surfcert
+- organisation: Universiteit van Amsterdam
+  image: /images/sections/participants/uva.png
+  link: https://extranet.uva.nl/content/a-z/cert-uva/cert-uva.html

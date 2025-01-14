@@ -1,0 +1,37 @@
+{{ $sectionID := replace (lower .section.name) " " "-"  }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container-fluid anchor pb-5 achievements-section-x">
+  {{ if not (.section.hideTitle) }}
+    <h1 class="text-center">
+        <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
+  {{ else }}
+    <h1 class="text-center" style="display: none">
+        <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
+  {{ end }}
+  {{ if .section.text }}
+      <p class="text-center">{{ .section.text }}</p>
+  {{ end }}
+  <div class="container">
+    <div class="row">
+      {{ $pCounter := 0 }}
+      {{ range .achievements }}
+        {{ $pCounter = add $pCounter 1 }}
+        {{ partial "sections/participants/entry.html" . }}
+        {{ if modBool $pCounter 3 }}
+          </div><div class="row">
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <!-- achievements-holder holds achievement-entry -->
+  <!--
+  <div class="d-none" id="achievements-holder-x">
+    {{ range .achievements }}
+          {{ partial "sections/participants/entry.html" . }}
+    {{ end }}
+  </div>
+  -->
+</div>
