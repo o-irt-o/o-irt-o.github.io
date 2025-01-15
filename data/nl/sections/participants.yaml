@@ -39,6 +39,9 @@ achievements:
 - organisation: Surf Cert
   image: /images/sections/participants/surfcert.jpg
   link: https://www.surf.nl/diensten/surfcert
+- organisation: SvSnet
+  image: /images/sections/participants/svsnet.png
+  link: https://www.svsnet.nl/
 - organisation: Universiteit van Amsterdam
   image: /images/sections/participants/uva.png
   link: https://extranet.uva.nl/content/a-z/cert-uva/cert-uva.html
