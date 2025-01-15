@@ -1,0 +1,7 @@
+#!/bin/bash
+npm i
+while [ 1 ] ; do
+	hugo server
+	echo "Restarting, press CTRL+C now to quit"
+	sleep 1
+done
