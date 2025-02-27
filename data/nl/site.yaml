@@ -7,7 +7,7 @@ You can modify or distribute the theme without requiring any permission from the
 However, the theme author does not provide any warranty or takes any liability for any issue with the theme."
 
 # Meta description for your site.  This will help the search engines to find your site.
-description: Website van o-irt-o, het Operationeel Response Team overleg
+description: Website van o-IRT-o, het operationeel Incident Response Team overleg
 
 # specify the list of custom menus that you want to show in the top navbar.
 # they will be separated by a divider from the main menus.
@@ -26,4 +26,4 @@ openGraph:
   type: website
   description: Website van het operationeel Incident Response Team overleg.
   image: images/author/o-irt-o.webp
-  url: https://www.o-rt-o.nl
+  url: https://www.o-irt-o.nl
