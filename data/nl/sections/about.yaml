@@ -20,8 +20,15 @@ section:
 
 
 # a summary about you
-summary: '"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." -> "Er is niemand die van pijn zelf houdt, die het zoekt en die het hebben wil, eenvoudigweg omdat het pijn is..."'
-
+summary: |
+  Het "operationeel Incident Response Team overleg" (o-IRT-o) heeft tot doel een platform te 
+  zijn voor de actieve CSIRT community in Nederland, om het niveau van Incident Response op een 
+  hoger niveau te brengen en te houden door informatie te delen, van elkaars kennis en expertise 
+  gebruik te kunnen maken en zelfs af te stemmen over bepaalde zaken indien die organisatie 
+  overstijgend zijn. Deelname is veelal gekoppeld aan de organisatie waar een individu een bepaalde 
+  Incident Response (CSIRT) rol vervuld of (bewezen) expertise; maar ultimo is het lidmaatschap op 
+  persoonlijke titel. Dit is noodzakelijk om de onafhankelijkheid en het vertrouwen van en binnen 
+  het o-IRT-o te kunnen waarborgen.
 # your social links
 # give as many as you want. use font-awesome for the icons.
 socialLinks:

@@ -1,7 +1,7 @@
 ---
-title: "Shortcodes Samples"
+title: "o-irt-o heeft website"
 date: 2020-06-08T08:06:25+06:00
-description: Shortcodes sample
+description: Welkom op de o-irt-website
 menu:
   sidebar:
     name: Shortcodes Sample

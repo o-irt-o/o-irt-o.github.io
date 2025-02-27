@@ -9,11 +9,11 @@ section:
   # hideTitle: true
 
 # filter buttons
-buttons:
-- name: All
-  filter: "all"
-- name: "Interne documenten"
-  filter: "internal"
+#buttons:
+#- name: All
+#  filter: "all"
+#- name: "Interne documenten"
+#  filter: "internal"
 
 # your publications
 publications:
@@ -32,28 +32,30 @@ publications:
   #- name: Dr. Goodman
   #  url: https://example.com
   paper:
-    summary: Het o-irt-o charter fungeert als huishoudelijk regelement voor het o-irt-o
-    url: /files/lorem-ipsum.pdf
-  categories: ["internal"]
-  tags: ["Intene documenten", "Charter"]
+    summary: Het o-irt-o charter fungeert als huishoudelijk regelement voor het o-irt-o.
+    url: /files/charter-2025.pdf
+#  categories: ["internal"]
+#  tags: ["Intene documenten", "Charter"]
+  categories: []
+  tags: []
 
-- title: Geheimhoudingsverklaring
-  #publishedIn:
-  #  #name: 2020 IEEE Region Symposium (TENSYMP)
-  #  date: 7 June 2020
-  #  url: /files/lorem-ipsum.pdf
-  #authors:
-  #- name: Dr. Madman
-  #  url: https://example.com
-  #- name: Dr. Lessmad
-  #  url: https://example.com
-  #- name: Dr. Moremad
-  #  url: https://example.com
-  #- name: Dr. Goodman
-  #  url: https://example.com
-  paper:
-    summary: Alle deelnemers aan het o-irt-o zijn gebonden aan de persoonlijke geheimhoudingsverklaring.
-    url: /files/lorem-ipsum.pdf
-  categories: ["internal"]
-  tags: ["Intene documenten", "Geheimhoudingsverklaring"]
+#- title: Geheimhoudingsverklaring
+#  #publishedIn:
+#  #  #name: 2020 IEEE Region Symposium (TENSYMP)
+#  #  date: 7 June 2020
+#  #  url: /files/lorem-ipsum.pdf
+#  #authors:
+#  #- name: Dr. Madman
+#  #  url: https://example.com
+#  #- name: Dr. Lessmad
+#  #  url: https://example.com
+#  #- name: Dr. Moremad
+#  #  url: https://example.com
+#  #- name: Dr. Goodman
+#  #  url: https://example.com
+#  paper:
+#    summary: Alle deelnemers aan het o-irt-o zijn gebonden aan de persoonlijke geheimhoudingsverklaring.
+#    url: /files/lorem-ipsum.pdf
+#  categories: ["internal"]
+#  tags: ["Intene documenten", "Geheimhoudingsverklaring"]
 
