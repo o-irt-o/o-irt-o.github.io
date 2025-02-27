@@ -24,6 +24,6 @@ customMenus:
 openGraph:
   title: o-irt-o
   type: website
-  description: Website van het Operationeel Incident Response Team.
+  description: Website van het operationeel Incident Response Team overleg.
   image: images/author/o-irt-o.webp
   url: https://www.o-rt-o.nl
