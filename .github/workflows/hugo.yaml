@@ -65,7 +65,7 @@ jobs:
       - name: SFTP mirror
         if: github.ref_name == 'main' || github.ref_name == '3/merge'
         run: |
-          sudo snap install lftp 
+          sudo apt-get update && sudo apt-get install lftp 
           eval `ssh-agent -s`
           echo "${{ secrets.DEPLOY_KEY }}" | ssh-add - 
           lftp -e "set sftp:auto-confirm yes ; set mirror:exclude-regex '^\.well\-known'; mirror -eRv ./public/ ./o-irt-o.nl/htdocs/ --exclude ./well-known; quit;"  sftp://${{ secrets.DEPLOY_USER }}:@${{ secrets.DEPLOY_HOST }}:22
