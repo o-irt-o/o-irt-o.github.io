@@ -64,7 +64,7 @@ jobs:
             --minify 
       - name: rsync deploy
         uses: burnett01/rsync-deployments@5.2.1
-        if:   github.ref == 'refs/heads/main' || github.ref == 'refs/heads/deploy'
+        #if:   github.ref == 'refs/heads/main' || github.ref == 'refs/heads/deploy'
         with:
           switches: -avzr --delete
           path: public/
