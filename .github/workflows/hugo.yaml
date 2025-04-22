@@ -63,7 +63,7 @@ jobs:
             --gc \
             --minify 
       - name: Deploy with Exclude Patterns
-        uses: wlixcc/SFTP-Deploy-Action@v1
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
 #        #if:   github.ref == 'refs/heads/main' || github.ref == 'refs/heads/deploy'
         with:
           username:         ${{ secrets.DEPLOY_USER }}
