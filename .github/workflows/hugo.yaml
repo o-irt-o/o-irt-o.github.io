@@ -63,7 +63,7 @@ jobs:
             --gc \
             --minify 
       - name: SFTP sync
-        if: github.ref_name == 'main' || github.ref_name == 'deploy'
+        if: github.ref_name == 'deploy' 
         run: |
           sudo apt-get update && sudo apt-get install lftp 
           eval `ssh-agent -s`
