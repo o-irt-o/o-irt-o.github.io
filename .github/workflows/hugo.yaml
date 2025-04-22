@@ -63,7 +63,7 @@ jobs:
             --gc \
             --minify 
       - name: SFTP mirror
-        if: github.ref_name == 'main' || github.ref_name == '3/merge'
+        if: github.ref_name == 'main' # Only push to production if we commit to main
         run: |
           sudo apt-get update && sudo apt-get install lftp 
           eval `ssh-agent -s`
