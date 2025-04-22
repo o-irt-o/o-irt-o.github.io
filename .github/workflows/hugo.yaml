@@ -68,7 +68,7 @@ jobs:
           target-server:    ${{ secrets.DEPLOY_HOST }}
           remote-user:      ${{ secrets.DEPLOY_USER }}
           private-ssh-key:  ${{ secrets.DEPLOY_KEY }}
-          source-ath:       ./public/
+          source-path:      ./public/
           destination-path: ~/o-irt-o.nl/htdocs/
           #rsync-options:    -avzr --delete
 #      - name: rsync deploy
