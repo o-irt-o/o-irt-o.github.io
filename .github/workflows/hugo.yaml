@@ -62,32 +62,15 @@ jobs:
           hugo \
             --gc \
             --minify 
-      - name: 📂 Sync Files
-        uses: SamKirkland/web-deploy@v1
+      - name: "Deploy"
+        uses: milanmk/actions-file-deployer@master
         with:
-          target-server:    ${{ secrets.DEPLOY_HOST }}
+          remote-protocol:  "sftp"
+          remote-host:      ${{ secrets.DEPLOY_HOST }}
           remote-user:      ${{ secrets.DEPLOY_USER }}
-          private-ssh-key:  ${{ secrets.DEPLOY_KEY }}
-          source-path:      ./public/
-          destination-path: ~/o-irt-o.nl/htdocs/
-          #rsync-options:    -avzr --delete
-#      - name: rsync deploy
-#        uses: burnett01/rsync-deployments@5.2.1
-#        #if:   github.ref == 'refs/heads/main' || github.ref == 'refs/heads/deploy'
-#        with:
-#          switches: -avzr --delete
-#          path: public/
-#          remote_path: o-irt-o.nl/htdocs/
-#          remote_host: ${{ secrets.DEPLOY_HOST }}
-#          remote_user: ${{ secrets.DEPLOY_USER }}
-#          remote_key: ${{ secrets.DEPLOY_KEY }}
-#        \
-#            --baseURL "${{ steps.pages.outputs.base_url }}/"          
-
-#      - name: Upload artifact
-#        uses: actions/upload-pages-artifact@v3
-#        with:
-#          path: ./public
+          ssh-private-key:  ${{ secrets.DEPLOY_KEY }}
+          remote-path:      "./o-irt-o.nl/htdocs/"
+          local-path:       "./public/"
 
 #  # Deployment job
 #  deploy:
