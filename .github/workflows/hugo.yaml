@@ -37,6 +37,20 @@ jobs:
     env:
       HUGO_VERSION: 0.137.1
     steps:
+      - name: Debug GitHub Context
+        run: |
+          echo "github.ref: ${{ github.ref }}"
+          echo "github.ref_name: ${{ github.ref_name }}"
+      - name: SFTP sync
+        if: github.ref_name == 'deploy' 
+        run: |
+          sudo apt-get update && sudo apt-get install lftp 
+          eval `ssh-agent -s`
+          echo "${{ secrets.DEPLOY_KEY }}" | ssh-add - 
+          pwd
+          ls -l
+          lftp -e "set sftp:auto-confirm yes ; set mirror:exclude-regex '^\.well\-known'; mirror -eRv ./public/ ./o-irt-o.nl/htdocs/ --exclude ./well-known; quit;"  sftp://${{ secrets.DEPLOY_USER }}:@${{ secrets.DEPLOY_HOST }}:22
+          exit 1
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -62,16 +76,6 @@ jobs:
           hugo \
             --gc \
             --minify 
-      - name: SFTP sync
-        if: github.ref_name == 'deploy' 
-        run: |
-          sudo apt-get update && sudo apt-get install lftp 
-          eval `ssh-agent -s`
-          echo "${{ secrets.DEPLOY_KEY }}" | ssh-add - 
-          pwd
-          ls -l
-          lftp -e "set sftp:auto-confirm yes ; set mirror:exclude-regex '^\.well\-known'; mirror -eRv ./public/ ./o-irt-o.nl/htdocs/ --exclude ./well-known; quit;"  sftp://${{ secrets.DEPLOY_USER }}:@${{ secrets.DEPLOY_HOST }}:22
-          exit 1
 
 
 #  # Deployment job
