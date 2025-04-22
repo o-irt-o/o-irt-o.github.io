@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: SFTP sync
         run: |
-          #sudo apt-get update && sudo apt-get install lftp openssh-client
+          sudo apt-get update && sudo apt-get install lftp 
           eval `ssh-agent -s`
           echo "${{ secrets.DEPLOY_KEY }}" | ssh-add - 
           lftp -e "mirror -eRv . ./o-irt-o.nl/htdocs/; quit;"  sftp://${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:22
