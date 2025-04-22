@@ -62,16 +62,15 @@ jobs:
           hugo \
             --gc \
             --minify 
-      - name: "Deploy"
-        uses: milanmk/actions-file-deployer@master
+      - name: SFTP uploader
+        uses: wangyucode/sftp-upload-action@v2.0.4
         with:
-          remote-protocol:  "sftp"
-          remote-host:      ${{ secrets.DEPLOY_HOST }}
-          remote-user:      ${{ secrets.DEPLOY_USER }}
-          ssh-private-key:  ${{ secrets.DEPLOY_KEY }}
-          remote-path:      "./o-irt-o.nl/htdocs/"
-          local-path:       "./public/"
-
+          host:       ${{ secrets.DEPLOY_HOST }}
+          user:       ${{ secrets.DEPLOY_USER }}
+          privateKey: ${{ secrets.DEPLOY_KEY }}
+          localDir:   "./public/"
+          remoteDir:  "./o-irt-o.nl/htdocs"
+          removeExtraFilesOnServer: true
 #  # Deployment job
 #  deploy:
 #    environment:
