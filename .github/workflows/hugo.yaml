@@ -70,7 +70,7 @@ jobs:
           private-ssh-key:  ${{ secrets.DEPLOY_KEY }}
           source-ath:       ./public/
           destination-path: ~/o-irt-o.nl/htdocs/
-          rsync-options:    -avzr --delete
+          #rsync-options:    -avzr --delete
 #      - name: rsync deploy
 #        uses: burnett01/rsync-deployments@5.2.1
 #        #if:   github.ref == 'refs/heads/main' || github.ref == 'refs/heads/deploy'
