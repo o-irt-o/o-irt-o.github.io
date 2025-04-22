@@ -62,17 +62,15 @@ jobs:
           hugo \
             --gc \
             --minify 
-      - name: Deploy with Exclude Patterns
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
-#        #if:   github.ref == 'refs/heads/main' || github.ref == 'refs/heads/deploy'
+      - name: 📂 Sync Files
+        uses: SamKirkland/web-deploy@v1
         with:
-          username:         ${{ secrets.DEPLOY_USER }}
-          server:           ${{ secrets.DEPLOY_HOST }}
-          ssh_private_key:  ${{ secrets.DEPLOY_KEY }}
-          local_path:       './public'
-          remote_path:      'o-irt-o.nl/htdocs'
-          rsyncArgs:        '-avzr --delete'
-          sftpArgs:         '-o ConnectTimeout=5'
+          target-server:    ${{ secrets.DEPLOY_HOST }}
+          remote-user:      ${{ secrets.DEPLOY_USER }}
+          private-ssh-key:  ${{ secrets.DEPLOY_KEY }}
+          source-ath:       ./public/
+          destination-path: ~/o-irt-o.nl/htdocs/
+          rsync-options:    -avzr --delete
 #      - name: rsync deploy
 #        uses: burnett01/rsync-deployments@5.2.1
 #        #if:   github.ref == 'refs/heads/main' || github.ref == 'refs/heads/deploy'
