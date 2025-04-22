@@ -42,7 +42,7 @@ jobs:
           sudo apt-get update && sudo apt-get install lftp 
           eval `ssh-agent -s`
           echo "${{ secrets.DEPLOY_KEY }}" | ssh-add - 
-          lftp -e "set sftp:auto-confirm yes ; set mirror:exclude-regex '^\.well\-known'; mirror -eRv ./.github/ ./o-irt-o.nl/htdocs/ --exclude ./well-known; quit;"  sftp://${{ secrets.DEPLOY_USER }}:@${{ secrets.DEPLOY_HOST }}:22
+          lftp -e "set sftp:auto-confirm yes ; set mirror:exclude-regex '^\.well\-known'; mirror -eRv ./static/ ./o-irt-o.nl/htdocs/ --exclude ./well-known; quit;"  sftp://${{ secrets.DEPLOY_USER }}:@${{ secrets.DEPLOY_HOST }}:22
           exit 1
       - name: Install Hugo CLI
         run: |
