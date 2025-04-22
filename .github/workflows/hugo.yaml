@@ -39,7 +39,8 @@ jobs:
     steps:
       - name: SFTP sync
         run: |
-          sudo apt-get update && sudo apt-get install lftp openssh-client
+          #sudo apt-get update && sudo apt-get install lftp openssh-client
+          eval `ssh-agent -s`
           echo "${{ secrets.DEPLOY_KEY }}" | ssh-add - 
       - name: Install Hugo CLI
         run: |
