@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: SFTP sync
         run: |
-          sudo apt install lftp 
+          sudo snap install lftp openssh-client
           echo ${{ secrets.DEPLOY_KEY }} | ssh-add - 
       - name: Install Hugo CLI
         run: |
