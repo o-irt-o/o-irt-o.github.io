@@ -12,7 +12,7 @@ section:
 
 # Your achievements achievements
 achievements:
-- organisation: Belasting Dienst
+- organisation: Belastingdienst
   image: /images/sections/participants/bld.svg
   link: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/standaard_functies/prive/contact/fraude_misdaad_en_misstanden_melden/datalek-beveiligingslek-misbruik-computersystemen/security-operations-center-dutch-tax-and-customs-administration
 - organisation: Dutch Institute for Vulnerability Disclosure
